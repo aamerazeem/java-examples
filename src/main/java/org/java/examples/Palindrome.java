@@ -12,6 +12,9 @@ public class Palindrome {
       
    }
 
+   /**
+    * Returns true if a string is a palindrome
+    */
    public static boolean isPalindrome(String str) {    
       int n = str.length();
       for( int i = 0; i < n/2; i++ )
