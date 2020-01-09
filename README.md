@@ -1,3 +1,3 @@
 # java-examples
-Palindrome: A palindrome string is a string that is same after reverse.
-Ex: abba
+Palindrome: A palindrome string is a string which reads the same backward as forward.
+Ex: racecar
