@@ -4,7 +4,8 @@ package org.java.examples;
 public class Palindrome {
    
    public static void main(String[] args) {
-      if(isPalindrome( "abba" )) {
+      String input = "abcdcba";
+      if(isPalindromeRecursive( input ) && isPalindrome( input )) {
          System.out.println("The string is a palindrome");
       } else {
          System.out.println("The string is not a palindrome");
@@ -20,5 +21,23 @@ public class Palindrome {
       for( int i = 0; i < n/2; i++ )
           if (str.charAt(i) != str.charAt(n-i-1)) return false;
       return true;    
+  }
+   
+   /**
+    * Check recursively if a string is a palindrome
+    * @param str
+    * @return
+    */
+   public static boolean isPalindromeRecursive(String str) {    
+      if(str.length() == 0 || str.length() == 1)
+         return true; 
+     if(str.charAt(0) == str.charAt(str.length()-1))
+         // check for first and last char of String:
+         // if they are same then do the same thing for a substring
+         // with first and last char removed. and carry on this
+         // until you string completes or condition fails
+         return isPalindromeRecursive(str.substring(1, str.length()-1));
+
+     return false;    
   }
 }
